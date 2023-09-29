@@ -1,3 +1,3 @@
-# Chip
+# Chip 片語
 
-A programming language with Chinese syntax.
+**Ch**inese **I**nterpreted **P**ython
