@@ -1,16 +1,14 @@
 import sys
+import re
+import json
+import chinese2digits as c2d
 
 
 def interpret(file):
     content = open(file, "r").read()
-    content = content.replace("（", "(")
-    content = content.replace("）", ")")
-    content = content.replace("“", '"')
-    content = content.replace("”", '"')
-    content = content.replace("八", "8")
-    content = content.replace("九", "9")
-    content = content.replace("加", "+")
-    content = content.replace("寫出", "print")
+    for k, v in json.loads(open("dict.json", "r").read()).items():
+        content = re.sub(k, v, content)
+    content = c2d.takeChineseNumberFromString(content)["replacedText"]
     return content
 
 
