@@ -25,7 +25,7 @@
     寫出：甲除以二取整
 ```
 
-### Interpreted 解釋
+### Interpreted 解讀
 
 ```python
 print("你好，世界")
